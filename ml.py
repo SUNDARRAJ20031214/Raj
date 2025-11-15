@@ -62,7 +62,7 @@ if uploaded_file:
             model = GaussianNB()
 
         # Train model
-    if st.button("Train Model"):
+    
         model.fit(X_train, y_train)
 
         # Accuracy
@@ -73,10 +73,9 @@ if uploaded_file:
 
         st.subheader("🧪 Predict on New Data")
 
-    elif:   
+     
      user_input = {}
-    
-      for col in X.columns:
+     for col in X.columns:
             val = st.text_input(f"Enter value for {col}")
             if val:
                 try:
