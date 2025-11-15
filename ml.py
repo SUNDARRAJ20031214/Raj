@@ -62,7 +62,7 @@ if uploaded_file:
             model = GaussianNB()
 
         # Train model
-       if st.button("Train Model"):
+    if st.button("Train Model"):
         model.fit(X_train, y_train)
 
         # Accuracy
