@@ -101,10 +101,10 @@ if uploaded_file is not None:
         user_input[col] = val
 
       if st.button("Predict"):
-        user_df = pd.DataFrame([user_input])
-            user_df = user_df.reindex(columns=X.columns, fill_value=0)
-            prediction = model.predict(user_df)[0]
-            st.success(f"🔮 Prediction: {prediction}")
+       user_df = pd.DataFrame([user_input])
+       user_df = user_df.reindex(columns=X.columns, fill_value=0)
+       prediction = model.predict(user_df)[0]
+       st.success(f"🔮 Prediction: {prediction}")
 
 
  
