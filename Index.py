@@ -90,20 +90,20 @@ if uploaded_file is not None:
 
         # Prediction
         
-        st.subheader("🧪 Predict on your New Data")
+ st.subheader("🧪 Predict on your New Data")
 
-        user_input = {}
-        for col in X.columns:
-            val = st.text_input(f"Enter value for {col}")
-            if val:
-                try:
-                    user_input[col] = float(val)
-                except:
-                    user_input[col] = val
+ user_input = {}
+ for col in X.columns:
+    val = st.text_input(f"Enter value for {col}")
+    if val:
+     try:
+        user_input[col] = float(val)
+     except:
+        user_input[col] = val
 
-        if st.button("Predict"):
-            user_df = pd.DataFrame([user_input])
+ if st.button("Predict"):
+   user_df = pd.DataFrame([user_input])
             user_df = user_df.reindex(columns=X.columns, fill_value=0)
             prediction = model.predict(user_df)[0]
             st.success(f"🔮 Prediction: {prediction}")
-            
+                     
