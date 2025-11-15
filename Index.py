@@ -89,7 +89,7 @@ if uploaded_file is not None:
             st.write(f"**R² Score:** {r2:.2f}")
 
         # Prediction
-      st.subheader("🧪 Predict on New Data")
+        st.subheader("🧪 Predict on New Data")
 
         user_input = {}
         for col in X.columns:
