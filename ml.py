@@ -20,6 +20,7 @@ if uploaded_file:
     st.write(df.head())
 
     # Select target column
+    st.write("Choose your output column")
     target_col = st.selectbox("Select Target Column", df.columns)
 
     if target_col:
@@ -62,7 +63,6 @@ if uploaded_file:
             model = GaussianNB()
 
         # Train model
-    
         model.fit(X_train, y_train)
 
         # Accuracy
@@ -73,9 +73,8 @@ if uploaded_file:
 
         st.subheader("🧪 Predict on New Data")
 
-     
         user_input = {}
-         for col in X.columns:
+        for col in X.columns:
             val = st.text_input(f"Enter value for {col}")
             if val:
                 try:
@@ -83,7 +82,7 @@ if uploaded_file:
                 except:
                     user_input[col] = val
 
-         if st.button("Predict"):
+        if st.button("Predict"):
             user_df = pd.DataFrame([user_input])
             user_df = user_df.reindex(columns=X.columns, fill_value=0)
             prediction = model.predict(user_df)[0]
