@@ -92,8 +92,8 @@ if uploaded_file is not None:
         st.subheader("🔮 Make a New Prediction")
         input_data = []
         for col in X.columns:
-            val = st.text_input(f"Enter {col}", "")
-            input_data.append(float(val) if val else 0.0)
+            val = st.text_input(f"Enter {col}")
+            input_data.append((val) if val else 0.0)
 
         if st.button("Predict"):
             result = model.predict([input_data])
