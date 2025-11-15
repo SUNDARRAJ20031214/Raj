@@ -90,7 +90,7 @@ if uploaded_file is not None:
 
         # Prediction
         
-        st.subheader("🧪 Predict on New Data")
+        st.subheader("🧪 Predict on your New Data")
 
         user_input = {}
         for col in X.columns:
