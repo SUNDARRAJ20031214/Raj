@@ -73,9 +73,10 @@ if uploaded_file:
 
         st.subheader("🧪 Predict on New Data")
 
-        user_input = {}
-    elif:
-     for col in X.columns:
+    elif:   
+     user_input = {}
+    
+      for col in X.columns:
             val = st.text_input(f"Enter value for {col}")
             if val:
                 try:
